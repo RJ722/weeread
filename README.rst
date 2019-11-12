@@ -33,10 +33,15 @@ Finally, run the server:
 
 Open `localhost:5000 <http://localhost:5000/>`_
 
+Credits
+-------
+
+* It uses the famous Ed-Tufte theme (thanks to `Tufte CSS
+by David Liepmann <https://edwardtufte.github.io/tufte-css/>`_ ).
+
+
 TODO
 ----
 
 * Handle the case when the `LOGDIR` is empty.
 * Make PATH configurable through GUI
-* Add thank you note for Tufte
-
