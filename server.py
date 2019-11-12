@@ -1,3 +1,4 @@
+from collections import namedtuple
 import os
 from pathlib import Path
 
@@ -9,17 +10,9 @@ common = Common(app)
 
 PATH = '/Users/rahuljha/.weechat/logs'
 p = Path(PATH)
+Message = namedtuple('Message', ['timestamp', 'author', 'text'])
 chart = {}
 num = 0
-
-
-class Message(object):
-    # TODO: Use a namedtuple here?
-    def __init__(self, timestamp, author, text):
-        self.timestamp = timestamp
-        self.author = author
-        self.text = text
-
 
 class Chat(object):
     def __init__(self, filepath, slug):
