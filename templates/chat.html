@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  Here's your chat:
-  <body>
-    <table border='1' width='95%' align='center'>
-      <tr>
-        <th> Timestamp </th>
-        <th> Author </th>
-        <th> Message </th>
-      </tr>
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ chat.title }} | Weechat Log Visualizer </title>
+    <link rel="stylesheet" href="/static/tufte.css"/>
+    <link rel="stylesheet" href="/static/latex.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-      {% for message in chat.messages %}
-        <tr>
-          <td> {{ message.timestamp }} </td>
-          <td> {{ message.author }} </td>
-          <td> {{ message.text }}   </td>
-        </tr>
-      {% endfor %}
-    </table>
+  <body>
+    <article>
+      <section>
+        <h1> # {{ chat.title }} </h1>
+      </section>
+
+      <section>
+        <div>
+          <table class="fullwidth">
+            <colgroup>
+              <col align="center" width="15%">
+              <col align="center" width="10%">
+              <col align="left">
+            </colgroup>
+
+            <thead>
+              <tr>
+                <th> Timestamp </th>
+                <th> Author </th>
+                <th> Message </th>
+              </tr>
+            </thead>
+
+            <tbody>
+            {% for message in chat.messages %}
+              <tr>
+                <td> {{ message.timestamp }} </td>
+                <td> {{ message.author }} </td>
+                <td> {{ message.text }}   </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </article>
   </body>
 </html>

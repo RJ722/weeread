@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="tufte.css"/>
+    <link rel="stylesheet" href="latex.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 <h1> Chats </h1>
 
 <ul>
   {% for chat in chats %}
-    <li> <a href="/chat/{{ chat.slug }}"> {{ chat.title }} </a> </li> {% endfor %}
+    <li> <a href="/chat/{{ chat.slug }}"> {{ chat.title }} </a> </li>
+  {% endfor %}
 </ul>
 </html>

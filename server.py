@@ -14,6 +14,7 @@ num = 0
 
 
 class Message(object):
+    # TODO: Use a namedtuple here?
     def __init__(self, timestamp, author, text):
         self.timestamp = timestamp
         self.author = author
@@ -56,7 +57,7 @@ def show_chat(slug):
     try:
         chat = chart[int(slug)]
         return render_template('chat.html', chat=chat)
-    except KeyError or ValueError:
+    except (KeyError, ValueError):
         return 'Oops, that chat does not exist! :-)'
     except IOError:
         abort(404)
