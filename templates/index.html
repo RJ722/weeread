@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1> Chats </h1>
+
+<ul>
+  {% for chat in chats %}
+    <li> <a href="/chat/{{ chat.slug }}"> {{ chat.title }} </a> </li> {% endfor %}
+</ul>
+</html>

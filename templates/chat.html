@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  Here's your chat:
+  <body>
+    <table border='1' width='95%' align='center'>
+      <tr>
+        <th> Timestamp </th>
+        <th> Author </th>
+        <th> Message </th>
+      </tr>
+
+      {% for message in chat.messages %}
+        <tr>
+          <td> {{ message.timestamp }} </td>
+          <td> {{ message.author }} </td>
+          <td> {{ message.text }}   </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
