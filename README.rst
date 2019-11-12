@@ -21,7 +21,7 @@ Install the required package (preferably inside a virtual environment) using
 
     $ pip3 install -r requirements.txt
 
-Edit the `PATH` variable in `server.py` pointing towards the directory which
+Edit the `LOGDIR` variable in `server.py` pointing towards the directory which
 contains all your weechat logs (defaults to `'~/.weechat/logs/'`).
 
 Finally, run the server:
@@ -32,3 +32,11 @@ Finally, run the server:
 
 
 Open `localhost:5000 <http://localhost:5000/>`_
+
+TODO
+----
+
+* Handle the case when the `LOGDIR` is empty.
+* Make PATH configurable through GUI
+* Add thank you note for Tufte
+

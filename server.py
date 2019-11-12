@@ -8,8 +8,8 @@ from flask_common import Common
 app = Flask(__name__)
 common = Common(app)
 
-PATH = Path.home()/'.weechat/logs' # WIP: Make PATH configurable.
-p = Path(PATH)
+LOGDIR = Path.home()/'.weechat/logs' # WIP: Make configurable.
+p = Path(LOGDIR)
 Message = namedtuple('Message', ['timestamp', 'author', 'text'])
 chart = {}
 num = 0
