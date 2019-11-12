@@ -34,7 +34,7 @@ class Chat(object):
         for line in lines:
             broken_message = line.split()
             author = broken_message[2]
-            if author in ('<--', '-->', '--', '***'):
+            if author in ('<--', '-->', '--', '=!=', '***'):
                 continue
             timestamp = ' '.join(broken_message[:2])
             text = ' '.join(broken_message[3:])
