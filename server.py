@@ -3,10 +3,9 @@ from pathlib import Path
 
 from flask import abort, Flask, render_template
 from flask_common import Common
-from prettytable import PrettyTable
 
 app = Flask(__name__)
-# common = Common(app)
+common = Common(app)
 
 PATH = '/Users/rahuljha/.weechat/logs'
 p = Path(PATH)
@@ -69,5 +68,4 @@ if __name__ == '__main__':
             num += 1
 
     app.debug = True
-    app.run()
-    # common.serve()
+    common.serve()
